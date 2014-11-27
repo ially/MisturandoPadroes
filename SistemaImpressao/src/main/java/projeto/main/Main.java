@@ -15,6 +15,15 @@ public class Main {
         secretaria.setJeitoImprimir(JatoTinta.getJatoTintaInstancia());
         secretaria.realizarImpressao();
         
+        Setor tesouraria = new Tesouraria();
+        tesouraria.setJeitoImprimir(JatoTinta.getJatoTintaInstancia());
+        tesouraria.realizarImpressao();
+        
+        tesouraria.setJeitoImprimir(Laser.getLaserInstancia());
+        tesouraria.realizarImpressao();
+        
+        secretaria.setJeitoImprimir(Laser.getLaserInstancia());
+        secretaria.realizarImpressao();
         
     }
     
