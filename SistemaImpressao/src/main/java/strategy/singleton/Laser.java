@@ -10,6 +10,9 @@ public class Laser implements JeitoImprimir{
     
     public static Laser getLaserInstancia(){
         
+        laserInstancia = null; /* Fazendo o teste dar erro. Esta linha não faz parte do Singleton somente
+                                    para causar um erro no teste.*/
+        
         if(laserInstancia == null){
             laserInstancia = new Laser();
             System.out.println("Iniciou e Utilizou Impressora Laser.");
@@ -18,6 +21,7 @@ public class Laser implements JeitoImprimir{
             System.out.println("Utilizou Impressora Laser.");
         }
         return laserInstancia;
+        
     }
 
     @Override

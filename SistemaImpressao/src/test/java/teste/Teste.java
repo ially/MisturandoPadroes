@@ -12,6 +12,8 @@ public class Teste {
     
     private JatoTinta instancia01, instancia02;
     
+    private Laser inicio, fim;
+    
     public Teste() {
     }
     
@@ -32,9 +34,16 @@ public class Teste {
     }
 
     @Test
-    public void testGetInstanceCenarioTerra(){
+    public void testaImpressoaraJatoTinta(){
         instancia01 = JatoTinta.getJatoTintaInstancia();
         instancia02 = JatoTinta.getJatoTintaInstancia();
         assertEquals(instancia02, instancia01);        
+    }
+    
+    @Test
+    public void testaImpressoraLaser(){
+        inicio = Laser.getLaserInstancia();
+        fim = Laser.getLaserInstancia();
+        assertEquals(fim, inicio);        
     }
 }
