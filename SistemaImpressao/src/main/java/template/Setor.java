@@ -1,6 +1,10 @@
 package template;
 
+import strategy.JeitoImprimir;
+
 public abstract class Setor {
+    
+    private JeitoImprimir jeitoImprimir;
         
     private void enviarArquivo(){
         
@@ -20,6 +24,15 @@ public abstract class Setor {
         imprimirArquivo();
         finalizarImpressao();
     }   
+
+    public JeitoImprimir getJeitoImprimir() {
+        return jeitoImprimir;
+    }
+
+    public void setJeitoImprimir(JeitoImprimir jeitoImprimir) {
+        this.jeitoImprimir = jeitoImprimir;
+    }
   
+    
     
 }
